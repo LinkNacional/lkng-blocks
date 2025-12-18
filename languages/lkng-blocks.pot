@@ -1,0 +1,80 @@
+# Copyright (C) 2025 Link Nacional Blocks for Gutenberg
+# This file is distributed under the same license as the Link Nacional Blocks for Gutenberg package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Link Nacional Blocks for Gutenberg 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lkng-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-12-04T12:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: lkng-blocks\n"
+
+#: blocks/youtube-shorts-gallery/block.php:89
+msgctxt "block title"
+msgid "YouTube Shorts Gallery"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/block.php:90
+msgctxt "block description"
+msgid "Display a gallery of YouTube Shorts videos with navigation arrows."
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "initial description"
+msgid "Use the sidebar settings to add your YouTube Shorts videos"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "input label"
+msgid "YouTube URL"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "input label"
+msgid "Title (Optional)"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "input placeholder"
+msgid "Enter video title..."
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "sidebar button"
+msgid "+ Add Video"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "sidebar button"
+msgid "+ Add More Video"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "panel title"
+msgid "Gallery Settings"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "panel title"
+msgid "Add Videos"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "panel title"
+msgid "Manage Videos"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "control label"
+msgid "Columns"
+msgstr ""
+
+#: blocks/youtube-shorts-gallery/editor.js
+msgctxt "control label"
+msgid "Show Navigation Arrows"
+msgstr ""

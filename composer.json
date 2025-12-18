@@ -1,0 +1,40 @@
+{
+    "name": "linknacional/lkng-blocks",
+    "description": "Link Nacional Blocks for Gutenberg - Utilize nossos componentes para personalizar seu site usando o ACF/SCF ou até mesmo blocos únicos.",
+    "type": "wordpress-plugin",
+    "keywords": ["wordpress", "gutenberg", "blocks", "acf", "scf", "components"],
+    "homepage": "https://www.linknacional.com",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "Lkng\\Lkng_Blocks\\Includes\\": "includes/",
+            "Lkng\\Lkng_Blocks\\Admin\\": "admin/",
+            "Lkng\\Lkng_Blocks\\PublicView\\": "public/",
+            "Lkng\\Lkng_Blocks\\Blocks\\": "blocks/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Link Nacional",
+            "email": "contato@linknacional.com",
+            "homepage": "https://www.linknacional.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {},
+    "require-dev": {
+        "phan/phan": "5.4.1"
+    },
+    "support": {
+        "email": "contato@linknacional.com",
+        "issues": "https://github.com/linknacional/lkng-blocks/issues",
+        "source": "https://github.com/linknacional/lkng-blocks"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
