@@ -1,130 +1,101 @@
-# 🚀 Guia de Desenvolvimento - LKNG Blocks
+# LKNG Blocks
 
-## ⚙️ Configuração do Ambiente
-
-### 📦 Dependências
-```bash
-npm install
-```
-
-### 🔨 Comandos de Build
-
-#### Desenvolvimento (com watch)
-```bash
-npm run dev
-```
-
-#### Produção
-```bash
-npm run build
-```
-
-#### Servidor de desenvolvimento
-```bash
-npm start
-```
+Plugin WordPress que adiciona blocos customizados para o Gutenberg editor.
 
 ## 📁 Estrutura do Projeto
 
 ```
-src/
-├── blocks/
+lkng-blocks/
+├── admin/                 # Interface administrativa
+├── blocks/                # Blocos compilados
 │   └── youtube-shorts-gallery/
-│       ├── editor.js      # Gutenberg editor
-│       ├── frontend.js    # Frontend com Swiper.js
-│       ├── editor.css     # Estilos do editor
-│       └── frontend.css   # Estilos do frontend
+│       ├── block.php      # Definição do bloco
+│       ├── editor.js      # Editor Gutenberg
+│       ├── frontend.js    # JavaScript frontend
+│       └── style.css      # Estilos
+├── includes/             # Classes principais
+├── public/              # Frontend público
+└── languages/          # Traduções
 ```
 
-## 🎯 YouTube Shorts Gallery Block
+## 🎯 Blocos Disponíveis
 
-### ✨ Recursos Implementados
-- **🎠 Carousel Infinito**: Powered by Swiper.js
-- **📱 Responsivo**: Adapta automaticamente para mobile/tablet/desktop
-- **🎮 Controles**: Setas de navegação + pagination dots
-- **♿ Acessibilidade**: Suporte a keyboard e screen readers
-- **🎨 Efeitos**: Coverflow effect com cards centralizados
-- **⚡ Performance**: Lazy loading de imagens
+### YouTube Shorts Gallery
 
-### 🛠️ Modo Slider vs Gallery
-- **Slider Mode**: Carousel infinito com Swiper.js (padrão)
-- **Gallery Mode**: Grid tradicional com navegação simples
+Bloco para exibir galerias de YouTube Shorts com dois modos de visualização:
 
-### 🎛️ Controles do Editor
-- Toggle Slider/Gallery mode
-- Configuração de colunas (gallery mode)
-- Show/hide navigation arrows
-- Gerenciar vídeos via sidebar
+**✨ Recursos:**
+- 🎠 **Modo Carousel**: Slider infinito com Swiper.js
+- 📱 **Modo Grid**: Layout de galeria responsivo
+- 🎮 **Controles**: Setas de navegação e pagination
+- 📱 **Responsivo**: Adapta para mobile/tablet/desktop
+- ⚡ **Performance**: Lazy loading de imagens
+- ♿ **Acessibilidade**: Suporte a keyboard e screen readers
 
-## 🔧 Desenvolvimento
+**🎛️ Opções do Editor:**
+- Toggle entre modo Slider/Grid
+- Configuração de colunas (modo grid)
+- Show/hide controles de navegação
+- Gerenciamento de vídeos via sidebar
 
-### 📝 Editando os Blocos
-1. Edite arquivos em `src/blocks/`
+## 🛠️ Desenvolvimento
+
+### Requisitos
+- WordPress 5.0+
+- PHP 7.4+
+- Node.js (para compilar assets)
+
+### Setup Local
+```bash
+# Instalar dependências
+npm install
+
+# Compilar para desenvolvimento (com watch)
+npm run dev
+
+# Compilar para produção
+npm run build
+```
+
+### Editando Blocos
+1. Arquivos fonte ficam em `src/blocks/`
 2. Execute `npm run dev` para watch automático
-3. Arquivos compilados vão para `blocks/`
+3. Arquivos compilados são gerados em `blocks/`
 
-### 🧪 Testing
-- Teste no Gutenberg editor
-- Verifique responsividade
-- Teste navegação por teclado
-- Validar URLs do YouTube
+## 🎨 Customização
 
-### 📱 Breakpoints Responsivos
+### Responsividade
 - **Desktop**: 1024px+
-- **Tablet**: 768px - 1023px
+- **Tablet**: 768px - 1023px  
 - **Mobile**: até 767px
 
-## 🎨 Customização de Estilos
-
-### 🎪 Variáveis CSS
+### Variáveis CSS Disponíveis
 ```css
 --primary-color: #ff0000;    /* Cor principal (YouTube red) */
 --secondary-color: #333;     /* Cor secundária */
 --border-radius: 16px;       /* Border radius dos cards */
 ```
 
-### 🎭 Efeitos Swiper
-```javascript
-coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: false,
-}
-```
+## 📚 Tecnologias
 
-## 📚 Bibliotecas Utilizadas
-- **Swiper.js v11**: Carousel infinito
-- **Webpack 5**: Bundler
-- **Babel**: Transpilação ES6+
-- **CSS Loader**: Processamento CSS
+- **WordPress**: 5.0+
+- **Gutenberg Blocks API**
+- **Swiper.js v11**: Carousel
+- **Webpack 5**: Build system
+- **Babel**: Transpilação JavaScript
 
-## 🐛 Troubleshooting
+## 🐛 Solução de Problemas
 
-### Swiper não inicializa
-- Verificar se jQuery está carregado
-- Conferir console para erros
-- Validar estrutura HTML do PHP
+### Swiper não funciona
+- Verificar se o JavaScript foi carregado corretamente
+- Conferir console do browser para erros
+- Validar estrutura HTML gerada pelo PHP
 
-### Styles não aplicam
-- Executar `npm run build`
+### Estilos não aplicam
+- Executar `npm run build` para recompilar
 - Limpar cache do WordPress
-- Verificar ordem de carregamento CSS
+- Verificar ordem de carregamento dos CSS
 
-### Performance
-- Otimizar imagens thumbnail
-- Usar lazy loading
-- Minimizar JavaScript
+## 📝 Licença
 
-## 🚀 Deploy
-
-### Produção
-1. `npm run build`
-2. Commit arquivos compilados
-3. Upload para WordPress
-
-### Staging
-1. `npm run dev` para desenvolvimento
-2. Test em ambiente local
-3. Validar cross-browser
+GPL v2 ou posterior - veja [LICENSE.txt](LICENSE.txt) para detalhes.
