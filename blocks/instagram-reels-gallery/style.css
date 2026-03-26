@@ -44,6 +44,9 @@
 }
 
 .lkng-instagram-reels-gallery .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 350px;
     height: 700px;
     position: relative;
@@ -230,8 +233,8 @@
     }
     
     .lkng-instagram-reels-gallery .video-container {
-        width: 250px;
-        height: 500px;
+        width: 250px !important;
+        height: 500px !important;
         border-radius: 8px;
     }
     
