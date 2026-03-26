@@ -47,36 +47,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
-    height: 700px;
+    width: 350px !important;
+    height: 700px !important;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     margin: 0;
     flex-shrink: 0;
     transition: transform 0.3s ease;
-}
-
-/* Ensure duplicated slides have same video container styling */
-.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container {
-    width: 350px;
-    height: 700px;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 0;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 12px !important;
-    border: none !important;
-    background: transparent !important;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
-    transform-origin: center center !important;
 }
 
 /* Instagram embed styling with iframe - versão simples */
@@ -139,17 +117,6 @@
 @keyframes blink { to { opacity: 0; } }
 @keyframes fade { to { opacity: 0; } }
 
-/* Ensure duplicated slides have same video container styling */
-.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 12px !important;
-    border: none !important;
-    background: transparent !important;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
-    transform-origin: center center !important;
-}
-
 /* Legacy Instagram embed styling - keeping for backward compatibility */
 .lkng-instagram-reels-gallery .instagram-media {
     width: 100% !important;
@@ -184,11 +151,6 @@
     transform: scale(0.9);
 }
 
-/* Apply same scale effect to duplicated slides video containers */
-.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram:not(.swiper-slide-active) .video-container {
-    transform: scale(0.9);
-}
-
 /* Placeholder styles */
 .lkng-instagram-reels-gallery-placeholder {
     width: 100%;
@@ -214,8 +176,8 @@
 /* Responsive adjustments - versão simplificada */
 @media (max-width: 768px) {
     .lkng-instagram-reels-gallery .video-container {
-        width: 300px;
-        height: 600px;
+        width: 300px !important;
+        height: 600px !important;
     }
     
     .lkng-instagram-reels-gallery .video-container iframe {

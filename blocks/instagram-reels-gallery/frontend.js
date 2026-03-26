@@ -102,9 +102,6 @@
                         gallery.style.width = '100%';
                         container.style.width = '100%';
                         
-                        // Duplicate slides for better infinite scrolling experience
-                        duplicateSlides(this);
-                        
                         // Initialize iframe setup
                         initInstagramIframes(gallery);
                         
@@ -201,24 +198,6 @@
                     el.style.display = 'none !important';
                 }
             }
-        });
-    }
-
-    // Function to duplicate slides for better infinite scrolling
-    function duplicateSlides(swiper) {
-        const wrapper = swiper.wrapperEl;
-        const slides = Array.from(wrapper.children);
-        const originalSlidesCount = slides.length;
-        
-        // Only duplicate if we have slides and loop is enabled
-        if (originalSlidesCount === 0) return;
-        
-        // Clone all slides and append to the end
-        slides.forEach(slide => {
-            const clone = slide.cloneNode(true);
-            // Add a class to identify duplicated slides
-            clone.classList.add('swiper-slide-duplicate-instagram');
-            wrapper.appendChild(clone);
         });
     }
 
