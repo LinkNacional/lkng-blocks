@@ -1,0 +1,310 @@
+/* Instagram Reels Gallery Block Styles */
+.lkng-instagram-reels-gallery {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.lkng-instagram-reels-gallery .swiper-container {
+    width: 100% !important;
+    height: 720px;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.lkng-instagram-reels-gallery .swiper-wrapper {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Garantir largura total quando inicializado */
+.lkng-instagram-reels-gallery.swiper-initialized {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.lkng-instagram-reels-gallery.swiper-initialized .swiper-container {
+    width: 100% !important;
+}
+
+.lkng-instagram-reels-gallery .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+    transform-origin: center center;
+}
+
+.lkng-instagram-reels-gallery .video-container {
+    width: 350px;
+    height: 700px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Ensure duplicated slides have same video container styling */
+.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container {
+    width: 350px;
+    height: 700px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background: transparent !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
+    transform-origin: center center !important;
+}
+
+/* Instagram embed styling with iframe - versão simples */
+.lkng-instagram-reels-gallery .video-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background: transparent !important;
+    display: block !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
+    transform-origin: center center !important;
+}
+
+/* Remover bolinha piscando e outros indicadores do Instagram */
+.lkng-instagram-reels-gallery .video-container::before,
+.lkng-instagram-reels-gallery .video-container::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Remover qualquer pseudo-elemento com animação/piscando */
+.lkng-instagram-reels-gallery .video-container *::before,
+.lkng-instagram-reels-gallery .video-container *::after {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+}
+
+/* Esconder elementos com texto "Assista no Instagram" ou similares */
+.lkng-instagram-reels-gallery .video-container [class*="watch"],
+.lkng-instagram-reels-gallery .video-container [class*="instagram"],
+.lkng-instagram-reels-gallery .video-container [data-text*="instagram"],
+.lkng-instagram-reels-gallery .video-container [aria-label*="Instagram"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Remover indicadores visuais piscando (bolinhas, dots, etc.) */
+.lkng-instagram-reels-gallery .video-container [class*="indicator"],
+.lkng-instagram-reels-gallery .video-container [class*="dot"],
+.lkng-instagram-reels-gallery .video-container [class*="pulse"],
+.lkng-instagram-reels-gallery .video-container [class*="blink"] {
+    display: none !important;
+    animation: none !important;
+}
+
+/* Forçar remoção de qualquer animação piscando */
+.lkng-instagram-reels-gallery * {
+    animation-name: none !important;
+    animation-duration: 0s !important;
+}
+
+/* Especificamente para keyframes de piscar */
+@keyframes pulse { to { opacity: 0; } }
+@keyframes blink { to { opacity: 0; } }
+@keyframes fade { to { opacity: 0; } }
+
+/* Ensure duplicated slides have same video container styling */
+.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram .video-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background: transparent !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
+    transform-origin: center center !important;
+}
+
+/* Legacy Instagram embed styling - keeping for backward compatibility */
+.lkng-instagram-reels-gallery .instagram-media {
+    width: 100% !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+    height: 700px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease !important;
+    transform-origin: center center !important;
+}
+
+.lkng-instagram-reels-gallery .instagram-media > div {
+    height: 100% !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* Scale effect for active slide */
+.lkng-instagram-reels-gallery .swiper-slide-active .video-container {
+    z-index: 2;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+/* Scale effect for secondary slides (non-active) - reduced size */
+.lkng-instagram-reels-gallery .swiper-slide:not(.swiper-slide-active) .video-container {
+    transform: scale(0.9);
+}
+
+/* Apply same scale effect to duplicated slides video containers */
+.lkng-instagram-reels-gallery .swiper-slide-duplicate-instagram:not(.swiper-slide-active) .video-container {
+    transform: scale(0.9);
+}
+
+/* Placeholder styles */
+.lkng-instagram-reels-gallery-placeholder {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: white;
+}
+
+.lkng-instagram-reels-gallery-placeholder p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.lkng-instagram-reels-gallery-placeholder small {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Responsive adjustments - versão simplificada */
+@media (max-width: 768px) {
+    .lkng-instagram-reels-gallery .video-container {
+        width: 300px;
+        height: 600px;
+    }
+    
+    .lkng-instagram-reels-gallery .video-container iframe {
+        border-radius: 8px !important;
+    }
+    
+    .lkng-instagram-reels-gallery .swiper-container {
+        height: 620px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lkng-instagram-reels-gallery {
+        padding: 0 10px;
+    }
+    
+    .lkng-instagram-reels-gallery .video-container {
+        width: 250px;
+        height: 500px;
+        border-radius: 8px;
+    }
+    
+    .lkng-instagram-reels-gallery .video-container iframe {
+        border-radius: 6px !important;
+    }
+    
+    .lkng-instagram-reels-gallery .swiper-container {
+        height: 520px;
+    }
+}
+
+/* Custom Navigation Arrows - Instagram Style */
+.lkng-instagram-reels-gallery .swiper-button-next,
+.lkng-instagram-reels-gallery .swiper-button-prev {
+    width: 50px !important;
+    height: 50px !important;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border-radius: 50% !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(240, 148, 51, 0.3);
+    transition: all 0.3s ease;
+}
+
+.lkng-instagram-reels-gallery .swiper-button-next:after,
+.lkng-instagram-reels-gallery .swiper-button-prev:after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.lkng-instagram-reels-gallery .swiper-button-next:hover,
+.lkng-instagram-reels-gallery .swiper-button-prev:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(240, 148, 51, 0.4);
+}
+
+.lkng-instagram-reels-gallery .swiper-button-disabled {
+    opacity: 0.3 !important;
+}
+
+/* Instagram loading animation */
+.lkng-instagram-reels-gallery .video-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 50%;
+    animation: instagramPulse 1.5s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.lkng-instagram-reels-gallery .instagram-media[data-instgrm-permalink] + .video-container::before {
+    display: none;
+}
+
+@keyframes instagramPulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Hide loading indicator when Instagram embed is loaded */
+.lkng-instagram-reels-gallery .instagram-media iframe + .video-container::before {
+    display: none;
+}

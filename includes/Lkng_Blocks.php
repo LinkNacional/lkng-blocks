@@ -75,7 +75,7 @@ class Lkng_Blocks {
 		if ( defined( 'LKNG_BLOCKS_VERSION' ) ) {
 			$this->version = LKNG_BLOCKS_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.1.0';
 		}
 		$this->plugin_name = 'lkng-blocks';
 
@@ -166,6 +166,7 @@ class Lkng_Blocks {
 	private function define_blocks() {
 		// Include block files
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/youtube-shorts-gallery/block.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/instagram-reels-gallery/block.php';
 	}
 
 	/**

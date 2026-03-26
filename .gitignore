@@ -5,15 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build output
-/blocks/**/*.js
-/blocks/**/*.css
-!/blocks/**/*.php
-
-
 # IDE
-.vscode/
-.idea/
 
 # OS
 .DS_Store
