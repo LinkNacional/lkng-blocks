@@ -1,102 +1,139 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== Link Nacional Blocks for Gutenberg ===
+Contributors: linknacional
 Donate link: https://www.linknacional.com/
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Tags: gutenberg, blocks, youtube, instagram, gallery, shorts, reels
+Requires at least: 5.0
+Tested up to: 6.4
+Stable tag: 1.1.0
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Custom Gutenberg blocks: YouTube Shorts and Instagram Reels galleries with responsive layouts and advanced settings.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+**Link Nacional Blocks for Gutenberg** is a professional WordPress plugin that adds custom, high-quality blocks to the Gutenberg editor, focusing on creating interactive and responsive galleries.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Included Blocks:**
 
-A few notes about the sections above:
+**🎬 YouTube Shorts Gallery**
+* YouTube Shorts video gallery with two viewing modes
+* Carousel Mode: infinite slider with smooth navigation
+* Grid Mode: fully responsive grid layout
+* Customizable controls (arrows, pagination)
+* Lazy loading for better performance
+* Complete accessibility support
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+**📸 Instagram Reels Gallery** 
+* Instagram Reels gallery with inline playback
+* Optimized embedding without redirects
+* Responsive layout for all devices
+* Navigation between carousel posts
+* Custom CSS for better integration
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+**General Features:**
+* Intuitive interface in Gutenberg editor
+* Advanced settings per block
+* Optimized code compatible with WordPress 5.0+
+* Developed following WordPress best practices
+* ACF/SCF support for advanced customizations
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+Ideal for content creators, agencies, and developers who need to integrate social media galleries professionally in WordPress sites.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+= Automatic Installation =
+1. Go to 'Plugins' > 'Add New' in the WordPress admin panel
+2. Search for "Link Nacional Blocks for Gutenberg"
+3. Click 'Install Now' and then 'Activate'
 
-e.g.
+= Manual Installation =
+1. Download the plugin file
+2. Upload the `lkng-blocks` folder to the `/wp-content/plugins/` directory
+3. Activate the plugin through the 'Plugins' menu in WordPress
 
-1. Upload `lkng-blocks.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+= Usage =
+1. Create or edit a post/page
+2. In the Gutenberg editor, click '+' to add a block
+3. Search for "YouTube Shorts Gallery" or "Instagram Reels Gallery"
+4. Configure the block according to your needs
+5. Publish and view the result
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Is the plugin compatible with my theme? =
 
-An answer to that question.
+Yes! The plugin was developed following WordPress standards and should work with any well-coded theme. The blocks are fully responsive and adapt to your theme's design.
 
-= What about foo bar? =
+= Do I need technical knowledge to use it? =
 
-Answer to foo bar dilemma.
+No! The interface is intuitive and works directly in the Gutenberg editor. Just add the block, configure the options, and you're done.
+
+= Are YouTube videos loaded quickly? =
+
+Yes! We use lazy loading and optimizations to ensure videos are only loaded when necessary, improving page performance.
+
+= Does Instagram Reels work without redirects? =
+
+Yes! We implemented a solution that allows inline playback of reels, avoiding redirects to Instagram.
+
+= Can I customize the visual appearance of the blocks? =
+
+Yes! The blocks respect your theme's style and you can add custom CSS for additional personalizations.
+
+= Does the plugin affect site speed? =
+
+No! The code is optimized and resources are only loaded when blocks are in use on the page.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. YouTube Shorts Gallery in carousel mode with navigation controls
+2. YouTube Shorts Gallery in responsive grid mode
+3. Instagram Reels Gallery with inline playback
+4. Block configuration interface in Gutenberg editor
+5. Example of gallery integrated in a post
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+= 1.1.0 - 26/03/2026 =
+* Added Instagram gallery component.
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+= 1.0.0 - 18/12/2025 =
+* Added YouTube Shorts gallery component.
+* Initial version.
 
 == Upgrade Notice ==
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
+= 1.1.0 =
+New Instagram Reels Gallery component with enhanced inline playback. Improved performance and better theme integration. Recommended update for all users.
 
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+= 1.0.0 =
+First stable version of Link Nacional Blocks for Gutenberg. Includes professional blocks for YouTube Shorts and Instagram Reels with advanced customization features.
 
-== Arbitrary section ==
+== Technical Support ==
 
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
+Need help? Contact us:
 
-== A brief Markdown Example ==
+* **Website:** [Link Nacional](https://www.linknacional.com/)
+* **Support:** Access our technical support area
+* **Documentation:** Detailed guides available on our website
 
-Ordered list:
+== Technical Resources ==
 
-1. Some feature
-1. Another feature
-1. Something else about the plugin
+**Technologies Used:**
+* WordPress REST API
+* React (for Gutenberg interface)
+* Swiper.js (for carousels)
+* Modern CSS3 with Grid and Flexbox
+* Optimized JavaScript ES6+
+* Native Lazy Loading
 
-Unordered list:
+**Compatibility:**
+* WordPress 5.0 or higher
+* PHP 7.4 or higher
+* Modern browsers (Chrome, Firefox, Safari, Edge)
+* Responsive themes
 
 * something
 * something else
